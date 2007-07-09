@@ -1,0 +1,88 @@
+The system is: Windows - 5.1 - x86
+Determining if the C compiler works passed with the following output:
+
+Microsoft (R) Visual Studio Version 8.0.50727.762.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+------ Build started: Project: cmTryCompileExec, Configuration: Debug Win32 ------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+cl /Od /D "_MBCS" /FD /EHsc /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC    /DWIN32 /D_WINDOWS  /Zm1000   /D_DEBUG         -DCMAKE_INTDIR=\"Debug\"
+   .\testCCompiler.c
+testCCompiler.c
+Compiling manifest to resources...
+Linking...
+Microsoft (R) Incremental Linker Version 8.00.50727.762
+Copyright (C) Microsoft Corporation.  All rights reserved.
+"/OUT:Debug\cmTryCompileExec.exe" /VERSION:0.0 /INCREMENTAL /MANIFEST "/MANIFESTFILE:cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /DEBUG "/PDB:Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:10000000 /machine:I386 /debug kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+".\cmTryCompileExec.dir\Debug\testCCompiler.obj" 
+".\cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" 
+Embedding manifest...
+Microsoft (R) Incremental Linker Version 8.00.50727.762
+Copyright (C) Microsoft Corporation.  All rights reserved.
+"/OUT:Debug\cmTryCompileExec.exe" /VERSION:0.0 /INCREMENTAL /MANIFEST "/MANIFESTFILE:cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /DEBUG "/PDB:Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:10000000 /machine:I386 /debug kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+".\cmTryCompileExec.dir\Debug\testCCompiler.obj" 
+".\cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" 
+Build log was saved at "file://c:\src\Contrib\wxTreeMultiCtrl\build\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm"
+cmTryCompileExec - 0 error(s), 0 warning(s)
+========== Build: 1 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========
+
+
+Determining size of void* passed with the following output:
+
+Microsoft (R) Visual Studio Version 8.0.50727.762.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+------ Build started: Project: cmTryCompileExec, Configuration: Debug Win32 ------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+cl /Od /D "_MBCS" /FD /EHsc /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC    /DWIN32 /D_WINDOWS  /Zm1000   /D_DEBUG         -DCMAKE_INTDIR=\"Debug\"
+   .\CheckTypeSize.c
+CheckTypeSize.c
+Compiling manifest to resources...
+Linking...
+Microsoft (R) Incremental Linker Version 8.00.50727.762
+Copyright (C) Microsoft Corporation.  All rights reserved.
+"/OUT:Debug\cmTryCompileExec.exe" /VERSION:0.0 /INCREMENTAL /MANIFEST "/MANIFESTFILE:cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /DEBUG "/PDB:Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:10000000 /machine:I386 /debug kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+".\cmTryCompileExec.dir\Debug\CheckTypeSize.obj" 
+".\cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" 
+Embedding manifest...
+Microsoft (R) Incremental Linker Version 8.00.50727.762
+Copyright (C) Microsoft Corporation.  All rights reserved.
+"/OUT:Debug\cmTryCompileExec.exe" /VERSION:0.0 /INCREMENTAL /MANIFEST "/MANIFESTFILE:cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /DEBUG "/PDB:Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:10000000 /machine:I386 /debug kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+".\cmTryCompileExec.dir\Debug\CheckTypeSize.obj" 
+".\cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" 
+Build log was saved at "file://c:\src\Contrib\wxTreeMultiCtrl\build\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm"
+cmTryCompileExec - 0 error(s), 0 warning(s)
+========== Build: 1 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========
+
+
+Determining if the CXX compiler works passed with the following output:
+
+Microsoft (R) Visual Studio Version 8.0.50727.762.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+------ Build started: Project: cmTryCompileExec, Configuration: Debug Win32 ------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+cl /Od /D "_MBCS" /FD /EHsc /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TP    /DWIN32 /D_WINDOWS  /Zm1000     /D_DEBUG        -DCMAKE_INTDIR=\"Debug\"
+   .\testCXXCompiler.cxx
+testCXXCompiler.cxx
+Compiling manifest to resources...
+Linking...
+Microsoft (R) Incremental Linker Version 8.00.50727.762
+Copyright (C) Microsoft Corporation.  All rights reserved.
+"/OUT:Debug\cmTryCompileExec.exe" /VERSION:0.0 /INCREMENTAL /MANIFEST "/MANIFESTFILE:cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /DEBUG "/PDB:Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:10000000 /STACK:10000000 /machine:I386 /debug kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+".\cmTryCompileExec.dir\Debug\testCXXCompiler.obj" 
+".\cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" 
+Embedding manifest...
+Microsoft (R) Incremental Linker Version 8.00.50727.762
+Copyright (C) Microsoft Corporation.  All rights reserved.
+"/OUT:Debug\cmTryCompileExec.exe" /VERSION:0.0 /INCREMENTAL /MANIFEST "/MANIFESTFILE:cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /DEBUG "/PDB:Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:10000000 /STACK:10000000 /machine:I386 /debug kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+".\cmTryCompileExec.dir\Debug\testCXXCompiler.obj" 
+".\cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" 
+Build log was saved at "file://c:\src\Contrib\wxTreeMultiCtrl\build\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm"
+cmTryCompileExec - 0 error(s), 0 warning(s)
+========== Build: 1 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========
+
+
