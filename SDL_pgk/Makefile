@@ -48,7 +48,6 @@ include $(MAKE_DIR)/obj_dep.mk
 $(LIB): $(C_OBJS) $(CPP_OBJS) $(BLD_DIR)
 	@echo Creating library $(LIB).
 	$(AR) $(LIB) $(C_OBJS) $(CPP_OBJS)
-	rm *.o *.dpp
 
 $(BLD_DIR):
 	+@[ -d $@ ] || mkdir $@ 
