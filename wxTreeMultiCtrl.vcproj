@@ -19,8 +19,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)lib\_MSVC_$(PlatformName)_$(ConfigurationName)"
-			IntermediateDirectory=".\build\$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_lib"
+			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
 			>
@@ -42,16 +42,16 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(SDL_EXTERN)\include&quot;;&quot;$(SDL_EXTERN)\lib_$(PlatformName)\vc_lib\mswd&quot;"
+				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(SDL_EXTERN)\include&quot;;&quot;$(SDL_EXTERN)\include\msvc&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				StringPooling="false"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
-				BrowseInformation="1"
+				BrowseInformation="0"
 				WarningLevel="4"
 				Detect64BitPortabilityProblems="true"
-				DebugInformationFormat="4"
+				DebugInformationFormat="1"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -81,15 +81,84 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="cd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\treemultictrl goto theend&#x0D;&#x0A;mkdir include\wx\treemultictrl&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\treemultictrl&quot;&#x0D;&#x0A;copy $(ProjectDir)contrib\include\wx\treemultictrl\*.h include\wx\treemultictrl&#x0D;&#x0A;:theend&#x0D;&#x0A;"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_lib"
+			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
+			ConfigurationType="4"
+			CharacterSet="2"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TargetEnvironment="3"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(SDL_EXTERN)\include&quot;;&quot;$(SDL_EXTERN)\include\msvc&quot;"
+				PreprocessorDefinitions="WIN64;_DEBUG;_LIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
+				StringPooling="false"
+				MinimalRebuild="false"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				BrowseInformation="0"
+				WarningLevel="4"
+				Detect64BitPortabilityProblems="true"
+				DebugInformationFormat="1"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="$(OutDir)/wxmswd_tmc.lib"
+				AdditionalLibraryDirectories="$(WXWIN)lib\vc_lib"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="cd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\treemultictrl goto theend&#x0D;&#x0A;mkdir include\wx\treemultictrl&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\treemultictrl&quot;&#x0D;&#x0A;copy $(ProjectDir)contrib\include\wx\treemultictrl\*.h include\wx\treemultictrl&#x0D;&#x0A;:theend&#x0D;&#x0A;"
 			/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)lib\_MSVC_$(PlatformName)_$(ConfigurationName)"
-			IntermediateDirectory=".\build\$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_lib"
+			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
-			WholeProgramOptimization="1"
+			WholeProgramOptimization="0"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -109,14 +178,14 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				WholeProgramOptimization="false"
-				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(SDL_EXTERN)\include&quot;;&quot;$(SDL_EXTERN)\lib_$(PlatformName)\vc_lib\msw&quot;"
+				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(SDL_EXTERN)\include&quot;;&quot;$(SDL_EXTERN)\include\msvc&quot;"
 				PreprocessorDefinitions="WIN32;_LIB;NDEBUG;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				StringPooling="true"
 				RuntimeLibrary="0"
-				BrowseInformation="1"
+				BrowseInformation="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
-				DebugInformationFormat="3"
+				DebugInformationFormat="0"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -146,79 +215,13 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
-			Name="Debug|x64"
-			OutputDirectory="$(SolutionDir)contrib\lib_$(PlatformName)"
-			IntermediateDirectory=".\build\$(ConfigurationName)"
-			ConfigurationType="4"
-			CharacterSet="2"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-				TargetEnvironment="3"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				Optimization="0"
-				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(WXWIN)\include&quot;;&quot;$(WXWIN)\lib\vc_lib\mswd&quot;;&quot;$(WXWIN)\include\wxwidgets&quot;;&quot;$(WXWIN)\lib_$(PlatformName)\vc_lib\mswd&quot;"
-				PreprocessorDefinitions="WIN64;_DEBUG;_LIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
-				StringPooling="false"
-				MinimalRebuild="false"
-				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
-				BrowseInformation="1"
-				WarningLevel="4"
-				Detect64BitPortabilityProblems="true"
-				DebugInformationFormat="3"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmswd_tmc.lib"
-				AdditionalLibraryDirectories="$(WXWIN)lib\vc_lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
+				CommandLine="cd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\treemultictrl goto theend&#x0D;&#x0A;mkdir include\wx\treemultictrl&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\treemultictrl&quot;&#x0D;&#x0A;copy $(ProjectDir)contrib\include\wx\treemultictrl\*.h include\wx\treemultictrl&#x0D;&#x0A;:theend&#x0D;&#x0A;"
 			/>
 		</Configuration>
 		<Configuration
 			Name="Release|x64"
-			OutputDirectory="$(SolutionDir)contrib\lib_$(PlatformName)"
-			IntermediateDirectory=".\build\$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_lib"
+			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
 			WholeProgramOptimization="1"
@@ -241,11 +244,11 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(WXWIN)\include&quot;;&quot;$(WXWIN)\lib\vc_lib\msw&quot;;&quot;$(WXWIN)\include\wxwidgets&quot;;&quot;$(WXWIN)\lib_$(PlatformName)\vc_lib\msw&quot;"
+				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(SDL_EXTERN)\include&quot;;&quot;$(SDL_EXTERN)\include\msvc&quot;"
 				PreprocessorDefinitions="WIN64;_LIB;NDEBUG;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				StringPooling="true"
 				RuntimeLibrary="0"
-				BrowseInformation="1"
+				BrowseInformation="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="3"
@@ -278,6 +281,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="cd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\treemultictrl goto theend&#x0D;&#x0A;mkdir include\wx\treemultictrl&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\treemultictrl&quot;&#x0D;&#x0A;copy $(ProjectDir)contrib\include\wx\treemultictrl\*.h include\wx\treemultictrl&#x0D;&#x0A;:theend&#x0D;&#x0A;"
 			/>
 		</Configuration>
 	</Configurations>
