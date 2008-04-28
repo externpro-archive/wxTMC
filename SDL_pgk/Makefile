@@ -7,12 +7,12 @@ ifneq (,$(findstring r,$(b)))
   BLD_DIR := _Release
   OUTPUT_DIR := ../../lib/_SunOS_Release
   CPPFLAGS := -c -O -DNDEBUG
-  WXINC := $(shell bash wx-config --unicode=no --debug=no --cxxflags)
+  WXINC := $(shell bash wx-config --prefix=$(SDL_EXTERN) --unicode=no --debug=no --cxxflags)
 else
   BLD_DIR := _Debug
   OUTPUT_DIR := ../../lib/_SunOS_Debug
   CPPFLAGS := -c -g -D_DEBUG
-  WXINC := $(shell bash wx-config --unicode=no --debug=yes --cxxflags)
+  WXINC := $(shell bash wx-config --prefix=$(SDL_EXTERN) --unicode=no --debug=yes --cxxflags)
   BLD_LTR := d
 endif
 
@@ -24,6 +24,7 @@ CC := gcc
 INC := -I../contrib/include/wx/treemultictrl \
        -I../contrib/src/treemultictrl \
        -I../contrib/src/treemultictrl/images \
+       -I$(SDL_EXTERN)/include \
        $(WXINC)
 VPATH := ../contrib/src/treemultictrl
 MAKE_DIR := .
