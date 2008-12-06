@@ -19,7 +19,7 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_lib"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
 			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
@@ -86,7 +86,7 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|x64"
-			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_lib"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
 			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
@@ -154,7 +154,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_lib"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
 			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
@@ -198,7 +198,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmsw_tmc.lib"
+				OutputFile="$(OutDir)/wxmsws_tmc.lib"
 				AdditionalLibraryDirectories=""
 			/>
 			<Tool
@@ -220,7 +220,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|x64"
-			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_lib"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
 			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
@@ -264,7 +264,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmsw_tmc.lib"
+				OutputFile="$(OutDir)/wxmsws_tmc.lib"
 				AdditionalLibraryDirectories="$(WXWIN)lib\vc_lib"
 			/>
 			<Tool
@@ -286,7 +286,7 @@
 		</Configuration>
 		<Configuration
 			Name="ReleaseDLL|Win32"
-			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_dll"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
 			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
@@ -352,7 +352,7 @@
 		</Configuration>
 		<Configuration
 			Name="ReleaseDLL|x64"
-			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_dll"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
 			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
