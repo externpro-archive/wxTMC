@@ -20,7 +20,6 @@
     #pragma hdrstop
 #endif
 
-#include "wx/arrimpl.cpp"
 #include "wxTreeMultiCtrl.h"
 #include "tmcimages.h"
 

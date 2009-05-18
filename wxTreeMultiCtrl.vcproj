@@ -476,6 +476,10 @@
 				>
 			</File>
 		</Filter>
+		<File
+			RelativePath=".\Makefile"
+			>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>
