@@ -39,8 +39,8 @@ BEGIN_EVENT_TABLE(wxTreeMultiCtrl, wxScrolledWindow)
 END_EVENT_TABLE()
 
 bool wxTreeMultiCtrl::Create(wxWindow *parent, wxWindowID id, const wxPoint& pos,
-                               const wxSize& size, long style, const wxValidator &validator,
-                               const wxString& name )
+                               const wxSize& size, long style, const wxValidator &WXUNUSED(validator),
+                               const wxString& WXUNUSED(name) )
 {
     wxScrolledWindow::Create( parent, id, pos, size, style | wxTAB_TRAVERSAL);
 
@@ -455,12 +455,12 @@ wxTreeMultiItem wxTreeMultiCtrl::GetExcludedParent(const wxTreeMultiItem &item)
 	return wxTreeMultiItem(0);
 }
 
-void wxTreeMultiCtrl::OnSize(wxSizeEvent &event)
+void wxTreeMultiCtrl::OnSize(wxSizeEvent &WXUNUSED(event))
 {
 	RecalculateSpanSizes();
 }
 
-void wxTreeMultiCtrl::OnPaint(wxPaintEvent &event )
+void wxTreeMultiCtrl::OnPaint(wxPaintEvent &WXUNUSED(event) )
 {
 	wxPaintDC dc(this);
 	PrepareDC(dc);
@@ -911,7 +911,7 @@ void wxTreeMultiCtrl::RecalculateNodePositions()
 int wxTreeMultiCtrl::CalculateNodeDimensions(TreeMultiItemBase *b, int currentY, int level)
 {
 	int gutter = (_gutterWidth * 2) + _iconWidth;
-	int y = 0, topSpacing = 0, cbgutter = 0;
+	int y = 0, topSpacing = 0;
 
 	// return same if no proper object
 	wxCHECK(b, 0);
