@@ -64,7 +64,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmswd_tmc.lib"
+				OutputFile="$(OutDir)\wxxmsw28vc80d_tmc.lib"
 				AdditionalLibraryDirectories=""
 			/>
 			<Tool
@@ -132,7 +132,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmswd_tmc.lib"
+				OutputFile="$(OutDir)\wxxmsw28vc80d_tmc.lib"
 				AdditionalLibraryDirectories=""
 			/>
 			<Tool
@@ -198,7 +198,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmsws_tmc.lib"
+				OutputFile="$(OutDir)\wxxmsw28vc80s_tmc.lib"
 				AdditionalLibraryDirectories=""
 			/>
 			<Tool
@@ -264,7 +264,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmsws_tmc.lib"
+				OutputFile="$(OutDir)\wxxmsw28vc80s_tmc.lib"
 				AdditionalLibraryDirectories=""
 			/>
 			<Tool
@@ -330,7 +330,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmsw_tmc.lib"
+				OutputFile="$(OutDir)\wxxmsw28vc80_tmc.lib"
 				AdditionalLibraryDirectories=""
 			/>
 			<Tool
@@ -396,7 +396,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmsw_tmc.lib"
+				OutputFile="$(OutDir)\wxxmsw28vc80_tmc.lib"
 				AdditionalLibraryDirectories=""
 			/>
 			<Tool
