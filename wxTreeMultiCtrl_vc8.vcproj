@@ -20,7 +20,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
-			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
+			IntermediateDirectory=".\build\_vc8_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
 			>
@@ -42,7 +42,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(SolutionDir)..\sdlExtern\include&quot;;&quot;$(SolutionDir)..\sdlExtern\include\msvc&quot;"
+				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(ProjectDir)..&quot;;&quot;$(ProjectDir)../../include&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				StringPooling="false"
 				MinimalRebuild="false"
@@ -87,7 +87,7 @@
 		<Configuration
 			Name="Debug|x64"
 			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
-			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
+			IntermediateDirectory=".\build\_vc8_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
 			>
@@ -110,7 +110,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(SolutionDir)..\sdlExtern\include&quot;;&quot;$(SolutionDir)..\sdlExtern\include\msvc&quot;"
+				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(ProjectDir)..&quot;;&quot;$(ProjectDir)../../include&quot;"
 				PreprocessorDefinitions="WIN64;_DEBUG;_LIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				StringPooling="false"
 				MinimalRebuild="false"
@@ -155,7 +155,7 @@
 		<Configuration
 			Name="Release|Win32"
 			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
-			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
+			IntermediateDirectory=".\build\_vc8_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
 			WholeProgramOptimization="0"
@@ -178,7 +178,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				WholeProgramOptimization="false"
-				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(SolutionDir)..\sdlExtern\include&quot;;&quot;$(SolutionDir)..\sdlExtern\include\msvc&quot;"
+				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(ProjectDir)..&quot;;&quot;$(ProjectDir)../../include&quot;"
 				PreprocessorDefinitions="WIN32;_LIB;NDEBUG;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -221,7 +221,7 @@
 		<Configuration
 			Name="Release|x64"
 			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
-			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
+			IntermediateDirectory=".\build\_vc8_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
 			WholeProgramOptimization="1"
@@ -244,7 +244,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(SolutionDir)..\sdlExtern\include&quot;;&quot;$(SolutionDir)..\sdlExtern\include\msvc&quot;"
+				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(ProjectDir)..&quot;;&quot;$(ProjectDir)../../include&quot;"
 				PreprocessorDefinitions="WIN64;_LIB;NDEBUG;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -287,7 +287,7 @@
 		<Configuration
 			Name="ReleaseDLL|Win32"
 			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
-			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
+			IntermediateDirectory=".\build\_vc8_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
 			WholeProgramOptimization="0"
@@ -310,7 +310,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				WholeProgramOptimization="false"
-				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(SolutionDir)..\sdlExtern\include&quot;;&quot;$(SolutionDir)..\sdlExtern\include\msvc&quot;"
+				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(ProjectDir)..&quot;;&quot;$(ProjectDir)../../include&quot;"
 				PreprocessorDefinitions="WIN32;_LIB;NDEBUG;RELEASEDLL;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -353,7 +353,7 @@
 		<Configuration
 			Name="ReleaseDLL|x64"
 			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
-			IntermediateDirectory=".\build\_MSVC_$(PlatformName)_$(ConfigurationName)"
+			IntermediateDirectory=".\build\_vc8_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="2"
 			WholeProgramOptimization="1"
@@ -376,7 +376,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(SolutionDir)..\sdlExtern\include&quot;;&quot;$(SolutionDir)..\sdlExtern\include\msvc&quot;"
+				AdditionalIncludeDirectories="contrib/include/wx/treemultictrl;contrib/src/treemultictrl/;contrib/src/treemultictrl/images;&quot;$(ProjectDir)..&quot;;&quot;$(ProjectDir)../../include&quot;"
 				PreprocessorDefinitions="WIN64;_LIB;NDEBUG;RELEASEDLL;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				StringPooling="true"
 				RuntimeLibrary="2"
