@@ -1,0 +1,9 @@
+Changes in v1.2
+---------------
+* Adjusted CMakeLists.txt file to work with included find script
+* Restructured directories to be lots easier
+* Added wxTreeMultiItem::GetName to get name back from created caption/window
+* Optimized documentation structure* Fixed some warnings related to deprecated XPM static char * references
+* Fixed wxTreeMultiCtrl::operator= to return wxTreeMultiCtrl (suggested by Orbitcowboy)
+* Lots of small changes
+* Compliant with wxWidgets 2.8 

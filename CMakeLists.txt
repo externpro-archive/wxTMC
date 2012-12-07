@@ -1,50 +1,80 @@
 ##---------------------------------------------------------------------------
-## $RCSfile$
-## $Source$
-## $Revision$
-## $Date$
-##---------------------------------------------------------------------------
 ## Author:      Jorgen Bodde
 ## Copyright:   (c) Jorgen Bodde
-## License:     wxWidgets License
+## License:     see LICENSE for details
 ##---------------------------------------------------------------------------
+
+cmake_minimum_required(VERSION 2.6)
 
 ##---------------------------------------------------
 ## Please set your wxWidgets configuration here
 ##--------------------------------------------------- 
 
-SET(WXW_USE_DEBUG ON)
-SET(WXW_USE_UNICODE OFF)
-SET(WXW_USE_SHARED OFF)
-SET(WXW_USE_UNIV OFF)
-SET(WXW_USE_MONO OFF)
-SET(WXW_FILE_VERSION "26")
-SET(WXW_VERSION "2.6")
-
 PROJECT( TREEMULTICTRL )
 
-INCLUDE (${TREEMULTICTRL_SOURCE_DIR}/bin/FindwxW.cmake)
-INCLUDE (${CMAKE_ROOT}/Modules/FindDoxygen.cmake OPTIONAL)
+FIND_PACKAGE(wxWidgets COMPONENTS base core gl net)
+FIND_PACKAGE(Doxygen)   
 
-# Options for building the stuff
-IF(DOXYGEN)
-  OPTION( MAKE_DOXYGEN "Generate doxygen documentation" ON )
-ENDIF(DOXYGEN)
+if(COMMAND cmake_policy)
+        cmake_policy(SET CMP0003 NEW)
+endif(COMMAND cmake_policy)
 
-OPTION( USE_CHECKBOXVIEW "Enable checkbox view functionality" OFF)
+IF(wxWidgets_FOUND)
 
-ADD_DEFINITIONS( ${WXWIDGETS_DEFINITIONS} )
-SET(TREEMULTICTRL_INCLUDE_PATH ${TREEMULTICTRL_SOURCE_DIR}/contrib/include)
+        INCLUDE(${wxWidgets_USE_FILE})
+        
+        # Options for building the stuff
+        IF(DOXYGEN_FOUND)
+            OPTION( MAKE_DOXYGEN         "Generate doxygen documentation" ON  )
+        ENDIF(DOXYGEN_FOUND)
 
-# If option Doxygen, create config script
-CONFIGURE_FILE(${TREEMULTICTRL_SOURCE_DIR}/doc/Doxyfile.in
-               ${TREEMULTICTRL_BINARY_DIR}/docs/Doxyfile
-               @ONLY IMMEDIATE)
+        OPTION( USE_CHECKBOXVIEW "Enable checkbox view functionality" OFF)
 
-IF(MAKE_DOXYGEN AND DOXYGEN) 
-	ADD_CUSTOM_TARGET(api-docs ALL ${DOXYGEN}
-				       ${TREEMULTICTRL_BINARY_DIR}/docs/Doxyfile DEPENDS
-				       ${TREEMULTICTRL_SOURCE_DIR}/doc/Doxyfile.in )  
-ENDIF(MAKE_DOXYGEN AND DOXYGEN)
+        # Doxygen example
+        IF(MAKE_DOXYGEN)
+            CONFIGURE_FILE(${TREEMULTICTRL_SOURCE_DIR}/docs/Doxyfile.in
+                        ${TREEMULTICTRL_BINARY_DIR}/docs/Doxyfile
+                        @ONLY IMMEDIATE)                  
+            
+            ADD_CUSTOM_TARGET(api-docs ALL ${DOXYGEN}
+                              ${TREEMULTICTRL_BINARY_DIR}/docs/Doxyfile DEPENDS
+  		              ${TREEMULTICTRL_SOURCE_DIR}/docs/Doxyfile.in )  
+        ENDIF(MAKE_DOXYGEN)                   
 
-SUBDIRS(contrib)
+        #IF(LINUX)
+        #    ADD_DEFINITIONS( -DLINUX=1 )
+        #ENDIF(LINUX)
+
+        IF(USE_CHECKBOXVIEW)
+            ADD_DEFINITIONS( -DCHECKBOXVIEW=1 ${wxWidgets_DEFINITIONS})
+        ELSE(USE_CHECKBOXVIEW)
+            ADD_DEFINITIONS( -DCHECKBOXVIEW=0 ${wxWidgets_DEFINITIONS})
+        ENDIF(USE_CHECKBOXVIEW)
+
+        INCLUDE_DIRECTORIES(${TREEMULTICTRL_SOURCE_DIR}/include
+                            ${wxWidgets_INCLUDE_DIRS})
+
+        SET(SRCS src/TreeMultiItemBase.cpp 
+                 src/TreeMultiItemNode.cpp
+                 src/TreeMultiItemWindow.cpp
+                 src/TreeMultiItemRoot.cpp
+                 src/wxTreeMultiCtrl.cpp
+                 src/wxTreeMultiEvent.cpp )
+
+        ADD_LIBRARY(treemultictrl ${SRCS}
+                include/wxTreeMultiCtrl.h 
+                include/TreeMultiItemBase.h
+                include/TreeMultiItemNode.h
+                include/TreeMultiItemRoot.h 
+                include/wxTreeMultiEvent.h)
+
+    
+        ADD_EXECUTABLE(treemultictrl_test WIN32 ${TREEMULTICTRL_SOURCE_DIR}/samples/MultiCtrlTest.cpp)           
+        
+        TARGET_LINK_LIBRARIES(treemultictrl_test treemultictrl ${wxWidgets_LIBRARIES})
+
+ELSE(wxWidgets_FOUND)
+        MESSAGE("wxWidgets not found!")
+ENDIF(wxWidgets_FOUND)
+
+########################################################

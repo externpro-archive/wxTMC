@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!DOCTYPE CodeBlocks_project_file>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="1"/>
+	<Project>
+		<Option title="TreeMultiCtrl"/>
+		<Option makefile="Makefile"/>
+		<Option makefile_is_custom="0"/>
+		<Option active_target="0"/>
+		<Option compiler="0"/>
+		<Build>
+			<Target title="debug">
+				<Option output="libtreemultictrl.a"/>
+				<Option working_dir=""/>
+				<Option object_output=".objs"/>
+				<Option deps_output=".deps"/>
+				<Option type="2"/>
+				<Option compiler="0"/>
+				<Option createDefFile="1"/>
+				<Option projectResourceIncludeDirsRelation="2"/>
+				<Compiler>
+					<Add option="-Wall"/>
+					<Add option="-g"/>
+				</Compiler>
+			</Target>
+			<Target title="release">
+				<Option output="libtreemultictrl.a"/>
+				<Option working_dir=""/>
+				<Option object_output=".objs"/>
+				<Option deps_output=".deps"/>
+				<Option type="2"/>
+				<Option compiler="0"/>
+				<Option createDefFile="1"/>
+				<Option projectResourceIncludeDirsRelation="2"/>
+				<Compiler>
+					<Add option="-Os"/>
+					<Add option="-Wall"/>
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="`wx-config --cppflags`"/>
+			<Add option="-DCHECKBOXVIEW=0"/>
+			<Add directory="../../contrib/include"/>
+			<Add directory="./"/>
+		</Compiler>
+		<Linker>
+			<Add option="`wx-config --libs`"/>
+		</Linker>
+		<Unit filename="../../contrib/include/wx/treemultictrl/TreeMultiItemBase.h">
+			<Option compilerVar=""/>
+			<Option compile="0"/>
+			<Option link="0"/>
+			<Option target="release"/>
+			<Option target="debug"/>
+		</Unit>
+		<Unit filename="../../contrib/include/wx/treemultictrl/TreeMultiItemNode.h">
+			<Option compilerVar=""/>
+			<Option compile="0"/>
+			<Option link="0"/>
+			<Option target="release"/>
+			<Option target="debug"/>
+		</Unit>
+		<Unit filename="../../contrib/include/wx/treemultictrl/TreeMultiItemRoot.h">
+			<Option compilerVar=""/>
+			<Option compile="0"/>
+			<Option link="0"/>
+			<Option target="release"/>
+			<Option target="debug"/>
+		</Unit>
+		<Unit filename="../../contrib/include/wx/treemultictrl/TreeMultiItemWindow.h">
+			<Option compilerVar=""/>
+			<Option compile="0"/>
+			<Option link="0"/>
+			<Option target="release"/>
+			<Option target="debug"/>
+		</Unit>
+		<Unit filename="../../contrib/include/wx/treemultictrl/wxTreeMultiCtrl.h">
+			<Option compilerVar=""/>
+			<Option compile="0"/>
+			<Option link="0"/>
+			<Option target="release"/>
+			<Option target="debug"/>
+		</Unit>
+		<Unit filename="../../contrib/include/wx/treemultictrl/wxTreeMultiEvent.h">
+			<Option compilerVar=""/>
+			<Option compile="0"/>
+			<Option link="0"/>
+			<Option target="debug"/>
+			<Option target="release"/>
+		</Unit>
+		<Unit filename="../../contrib/src/treemultictrl/TreeMultiItemBase.cpp">
+			<Option compilerVar="CPP"/>
+			<Option target="release"/>
+			<Option target="debug"/>
+		</Unit>
+		<Unit filename="../../contrib/src/treemultictrl/TreeMultiItemNode.cpp">
+			<Option compilerVar="CPP"/>
+			<Option target="release"/>
+			<Option target="debug"/>
+		</Unit>
+		<Unit filename="../../contrib/src/treemultictrl/TreeMultiItemRoot.cpp">
+			<Option compilerVar="CPP"/>
+			<Option target="release"/>
+			<Option target="debug"/>
+		</Unit>
+		<Unit filename="../../contrib/src/treemultictrl/TreeMultiItemWindow.cpp">
+			<Option compilerVar="CPP"/>
+			<Option target="release"/>
+			<Option target="debug"/>
+		</Unit>
+		<Unit filename="../../contrib/src/treemultictrl/tmcimages.h">
+			<Option compilerVar=""/>
+			<Option compile="0"/>
+			<Option link="0"/>
+			<Option target="release"/>
+			<Option target="debug"/>
+		</Unit>
+		<Unit filename="../../contrib/src/treemultictrl/wxTreeMultiCtrl.cpp">
+			<Option compilerVar="CPP"/>
+			<Option target="release"/>
+			<Option target="debug"/>
+		</Unit>
+		<Unit filename="../../contrib/src/treemultictrl/wxTreeMultiEvent.cp">
+			<Option compilerVar=""/>
+			<Option compile="0"/>
+			<Option link="0"/>
+			<Option target="debug"/>
+			<Option target="release"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

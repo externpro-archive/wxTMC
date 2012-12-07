@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1144610414 /home/jorg/src/treemultictrl/contrib/src/treemultictrl/TreeMultiItemBase.cpp
+	"wx/wxprec.h"
+	"wx/treemultictrl/TreeMultiItemBase.h"
+	"wx/treemultictrl/TreeMultiItemNode.h"
+
+1144610013 /home/jorg/src/treemultictrl/contrib/include/wx/treemultictrl/TreeMultiItemBase.h
+	"wx/wx.h"
+
+1144607877 /home/jorg/src/treemultictrl/contrib/include/wx/treemultictrl/TreeMultiItemNode.h
+	"wx/wx.h"
+	"wx/treebase.h"
+	<wx/dynarray.h>
+	"TreeMultiItemBase.h"
+	"TreeMultiItemWindow.h"
+
+1136396522 /home/jorg/src/treemultictrl/contrib/include/wx/treemultictrl/TreeMultiItemWindow.h
+	"wx/wx.h"
+	<wx/dynarray.h>
+	"TreeMultiItemBase.h"
+
+1144610448 /home/jorg/src/treemultictrl/contrib/src/treemultictrl/TreeMultiItemNode.cpp
+	"wx/wxprec.h"
+	"wx/treemultictrl/TreeMultiItemNode.h"
+	"wx/arrimpl.cpp"
+
+1143980130 /home/jorg/src/treemultictrl/contrib/src/treemultictrl/TreeMultiItemRoot.cpp
+	"wx/wxprec.h"
+	"wx/treemultictrl/TreeMultiItemRoot.h"
+
+1136396522 /home/jorg/src/treemultictrl/contrib/include/wx/treemultictrl/TreeMultiItemRoot.h
+	"wx/wx.h"
+	"TreeMultiItemBase.h"
+	"TreeMultiItemNode.h"
+
+1143980130 /home/jorg/src/treemultictrl/contrib/src/treemultictrl/TreeMultiItemWindow.cpp
+	"wx/wxprec.h"
+	"wx/treemultictrl/TreeMultiItemWindow.h"
+

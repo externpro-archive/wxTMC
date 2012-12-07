@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE CodeBlocks_layout_file>
+<CodeBlocks_layout_file>
+	<File name="../../contrib/include/wx/treemultictrl/wxTreeMultiCtrl.h" open="0" top="0">
+		<Cursor position="26751" topLine="645"/>
+	</File>
+	<File name="../../contrib/src/treemultictrl/wxTreeMultiCtrl.cpp" open="0" top="0">
+		<Cursor position="37783" topLine="1263"/>
+	</File>
+</CodeBlocks_layout_file>
