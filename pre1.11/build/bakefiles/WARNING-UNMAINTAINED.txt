@@ -1,6 +1,0 @@
-Sorry but I do not maintain the Bakefiles anymore. There is an issue with the include directory I cannot solve.
-If you can solve the Bakefile problems, please email me with the solution.
-
-I strongly advice to use CMake for this project, or if you are lazy, include all c++ files and header files in your project.
-
-- Jorgen

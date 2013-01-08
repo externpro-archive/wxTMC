@@ -1,6 +1,0 @@
-WXWIDGETS_FOUND: 1
-WXWIDGETS_LINK_DIRECTORIES: C:/wxWidgets-2.6.3/lib/vc_lib
-WXWIDGETS_LIBRARIES: comctl32.lib;wsock32.lib;rpcrt4.lib;wxbase26.lib;wxbase26_net.lib;wxbase26_xml.lib;wxmsw26_adv.lib;wxmsw26_core.lib;wxmsw26_html.lib;wxmsw26_xrc.lib;wxregex.lib;wxexpat.lib;wxpng.lib;wxtiff.lib;wxjpeg.lib;wxzlib.lib
-WXWIDGETS_CXX_FLAGS: 
-WXWIDGETS_INCLUDE_DIR: C:/wxWidgets-2.6.3/include;C:/wxWidgets-2.6.3/include/../contrib/include;C:/wxWidgets-2.6.3/lib/vc_lib/msw
-WXWIDGETS_DEFINITIONS: -DWINDOWS;-DWIN32;-D__WXMSW__
