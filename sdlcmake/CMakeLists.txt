@@ -2,7 +2,7 @@ set(lib_name tmc) # wxTreeMultiCtrl
 set(tmcroot ${CMAKE_CURRENT_SOURCE_DIR}/..)
 #######################################
 # include directories
-include_directories( 
+include_directories(
   ${tmcroot}/include
   ${tmcroot}/src
   )
