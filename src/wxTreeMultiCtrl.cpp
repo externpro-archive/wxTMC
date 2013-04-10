@@ -1182,6 +1182,9 @@ wxTreeMultiItem wxTreeMultiCtrl::InsertWindow(TreeMultiItemNode* ParentPtr, size
         NewWindowPtr->SetCheckboxState(Info.GetDefaultCheckState());
 #endif
 
+ // when flags allow, tell this window item to expand
+        NewWindowPtr->SetHorizontalSpan((WindowFlags & wxTMC_SPAN_WIDTH) != 0);
+
  // if the window is not visible, set hide flag
         this->ShowTreeMultiWindow(NewWindowPtr,NewWindowPtr->IsVisible());
 
